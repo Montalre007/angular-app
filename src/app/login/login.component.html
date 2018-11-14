@@ -1,0 +1,17 @@
+<div class="login">
+  <ul class="login_img">
+    <li><img src='../../assets/images/1.jpg' alt="" style="display: block"/></li>
+    <li><img src='../../assets/images/2.jpg' alt=""/></li>
+    <li><img src='../../assets/images/3.jpg' alt=""/></li>
+  </ul>
+  <div class="login_info">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username" [(ngModel)]="username"/>
+    <input type="password" placeholder="Password" [(ngModel)]="password"/>
+    <div style="overflow: hidden">
+      <input type="text" style="width:50%;float:left" maxlength="4" placeholder="Code" [(ngModel)]="code"/>
+      <code [width]="120" [height]="42" style="margin-top: 25px;float:left;" (sendCode)="getCodeNum($event)"></code>
+    </div>
+    <button (click)="SignIn()">Sign in</button>
+  </div>
+</div>
